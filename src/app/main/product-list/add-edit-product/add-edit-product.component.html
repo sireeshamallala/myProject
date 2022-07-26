@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-8 col-md-12">
+    <div class="tile">
+      <h3>Add Product</h3>
+      <hr>
+      <div class="tile-body">
+        <div class="row">
+             <div class="form-group col-sm-6">
+               <label class="control-label">Product Name</label>
+               <input type="text" class="form-control form-control-sm" placeholder="Enter Product Name"
+                      [(ngModel)]="productObject.name" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group col-sm-6">
+            <label class="control-label">Product Count</label>
+            <input type="number" class="form-control form-control-sm" placeholder="Enter Product Count"
+                   [(ngModel)]="productObject.count" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <label class="control-label">Product Quantity</label>
+            <input type="number" class="form-control form-control-sm" placeholder="Enter Product Quantity"
+                   [(ngModel)]="productObject.quantity" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm-6">
+            <label class="control-label">Product Price</label>
+            <input type="number" class="form-control form-control-sm" placeholder="Enter Product Rate"
+                   [(ngModel)]="productObject.price" [ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+      </div>
+      <div class="tile-footer"></div>
+      <div class="row">
+          <div class="text-right offset-10">
+            <button class="btn btn-sm btn-all-shadow waves-effect waves-light btn-info" (click)="saveProduct()">
+              <i class="fa fa-fw fa-check-circle"></i>
+              Save
+            </button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="btn btn-sm btn-all-shadow waves-effect waves-light btn-dark" [routerLink]="['/allProducts']">
+              <i class="fa fa-fw fa-times-circle"></i>
+              Cancel
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
